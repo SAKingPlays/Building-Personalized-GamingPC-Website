@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gaming Odyssey | Premium PC Hardware</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">GAMING<span>ODYSSEY</span></a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#pc-builder">Builder</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="login-btn" id="login-btn">Login</button>
+                    <button class="register-btn" id="register-btn">Register</button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <ul class="mobile-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#pc-builder">Builder</a></li>
+            <li><a href="#deals">Deals</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="mobile-login">Login</a></li>
+            <li><a href="#" id="mobile-register">Register</a></li>
+        </ul>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">₨0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Login Modal -->
+    <div class="auth-modal" id="login-modal">
+        <div class="auth-header">
+            <h3 class="auth-title">Login</h3>
+            <button class="close-auth" id="close-login">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <form class="auth-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="auth-btn">Login</button>
+            <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+        </form>
+    </div>
+    
+    <!-- Register Modal -->
+    <div class="auth-modal" id="register-modal">
+        <div class="auth-header">
+            <h3 class="auth-title">Register</h3>
+            <button class="close-auth" id="close-register">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <form class="auth-form">
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit" class="auth-btn">Register</button>
+            <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+        </form>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-actions">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products...">
+                </div>
+                <button class="cart-btn" id="cart-btn-hero">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Build Your Dream <span>Gaming PC</span></h1>
+                    <p class="hero-desc">Premium components, expert builds, and unbeatable performance for gamers and creators.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="window.location.href='#products'">Shop Now</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='#about'">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/herosection.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid">
+                <!-- Row 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/NvidiaGeForceRTX5090.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Graphics Card</div>
+                        <h3 class="product-name">Nvidia GeForce RTX 5090</h3>
+                        <div class="product-price">₨1,199.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="1" data-name="NVIDIA RTX 4080" data-price="1199.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/AMDRyzen79800X3D.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Processor</div>
+                        <h3 class="product-name">AMD Ryzen 7 9800X3D</h3>
+                        <div class="product-price">₨699.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="2" data-name="AMD Ryzen 9 7950X" data-price="699.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/MSIMAGB850TomahawkMaxWiFi.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Motherboard</div>
+                        <h3 class="product-name">MSI MAG B850 Tomahawk Max WiFi</h3>
+                        <div class="product-price">₨499.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="3" data-name="ASUS ROG Strix Z790-E" data-price="499.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/CorsairDominatorPlatinumRGBDDR5.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">RAM</div>
+                        <h3 class="product-name">Corsair Dominator Platinum RGB DDR5</h3>
+                        <div class="product-price">₨199.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="4" data-name="Corsair Vengeance RGB 32GB" data-price="199.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/WDBlackSN850X.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Storage</div>
+                        <h3 class="product-name">WD Black SN850X</h3>
+                        <div class="product-price">₨249.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="5" data-name="Samsung 990 PRO 2TB" data-price="249.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/CorsairHX1500i.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">PSU</div>
+                        <h3 class="product-name">Corsair HX1500i</h3>
+                        <div class="product-price">₨149.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="6" data-name="Corsair RM850x" data-price="149.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/NZXTH7Flow(2024).jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Case</div>
+                        <h3 class="product-name">NZXT H7 Flow (2024)</h3>
+                        <div class="product-price">₨99.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="7" data-name="NZXT H510" data-price="99.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/ThermalrightPeerlessAssassin120 SE.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cooling</div>
+                        <h3 class="product-name">Thermalright Peerless Assassin 120 SE</h3>
+                        <div class="product-price">₨179.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="8" data-name="NZXT Kraken X73" data-price="179.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/WAVLINKDualBayHardDriveDockingStation.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">HDD Docking Station</div>
+                        <h3 class="product-name">WAVLINK Dual Bay Hard Drive Docking Station</h3>
+                        <div class="product-price">₨1,599.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="9" data-name="NVIDIA RTX 4090" data-price="1599.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/AquacomputerD5NEXT.jpeg">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Water Cooling Pump</div>
+                        <h3 class="product-name">Aquacomputer D5 NEXT</h3>
+                        <div class="product-price">₨599.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="10" data-name="Intel Core i9-14900K" data-price="599.99">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Custom PC Builder Section -->
+    <section class="pc-builder" id="pc-builder">
+        <div class="container">
+            <h2 class="section-title">Custom PC Builder</h2>
+            <p class="section-desc">Select components to build your dream PC. We've added compatibility checks and visuals for an amazing experience!</p>
+            <div class="builder-container">
+                <div class="builder-components">
+                    <!-- CPU -->
+                    <div class="component-category">
+                        <h3 class="category-title">CPU</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="CPU">
+                                <img class="component-img" src="images/1.jpeg">
+                                <div class="component-name">Intel Core Ultra 9 285K</div>
+                                <div class="component-price">₨145,000</div>
+                            </div>
+                            <div class="component-option" data-category="CPU">
+                                <img class="component-img" src="images/2.jpeg">
+                                <div class="component-name">Intel Core Ultra 7 265K</div>
+                                <div class="component-price">₨95,000</div>
+                            </div>
+                            <div class="component-option" data-category="CPU">
+                                <img class="component-img" src="images/3.jpeg">
+                                <div class="component-name">AMD Ryzen 9 9950X</div>
+                                <div class="component-price">₨120,000</div>
+                            </div>
+                            <div class="component-option" data-category="CPU">
+                                <img class="component-img" src="images/4.jpeg">
+                                <div class="component-name">AMD Ryzen 7 9800X3D</div>
+                                <div class="component-price">₨85,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GPU -->
+                    <div class="component-category">
+                        <h3 class="category-title">GPU</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="GPU">
+                                <img class="component-img" src="images/5.jpeg">
+                                <div class="component-name">NVIDIA GeForce RTX 5090</div>
+                                <div class="component-price">₨1,400,000</div>
+                            </div>
+                            <div class="component-option" data-category="GPU">
+                                <img class="component-img" src="images/6.jpeg">
+                                <div class="component-name">NVIDIA GeForce RTX 5080</div>
+                                <div class="component-price">₨850,000</div>
+                            </div>
+                            <div class="component-option" data-category="GPU">
+                                <img class="component-img" src="images/7.jpeg">
+                                <div class="component-name">AMD Radeon RX 9070 XT</div>
+                                <div class="component-price">₨450,000</div>
+                            </div>
+                            <div class="component-option" data-category="GPU">
+                                <img class="component-img" src="images/8.jpeg">
+                                <div class="component-name">AMD Radeon RX 9060 XT</div>
+                                <div class="component-price">₨280,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Motherboard -->
+                    <div class="component-category">
+                        <h3 class="category-title">Motherboard</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="Motherboard">
+                                <img class="component-img" src="images/9.jpeg">
+                                <div class="component-name">MSI MAG Z890 Tomahawk WiFi</div>
+                                <div class="component-price">₨90,000</div>
+                            </div>
+                            <div class="component-option" data-category="Motherboard">
+                                <img class="component-img" src="images/10.jpeg">
+                                <div class="component-name">Gigabyte Z890 AORUS Elite WiFi 7</div>
+                                <div class="component-price">₨75,000</div>
+                            </div>
+                            <div class="component-option" data-category="Motherboard">
+                                <img class="component-img" src="images/11.jpeg">
+                                <div class="component-name">MSI MAG X870 Tomahawk WiFi</div>
+                                <div class="component-price">₨85,000</div>
+                            </div>
+                            <div class="component-option" data-category="Motherboard">
+                                <img class="component-img" src="images/12.jpeg">
+                                <div class="component-name">Gigabyte X870 AORUS Elite WiFi 7</div>
+                                <div class="component-price">₨70,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RAM -->
+                    <div class="component-category">
+                        <h3 class="category-title">RAM</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="RAM">
+                                <img class="component-img" src="images/13.jpeg">
+                                <div class="component-name">Corsair Dominator Platinum RGB DDR5 32GB (2x16GB) 7200MHz</div>
+                                <div class="component-price">₨38,000</div>
+                            </div>
+                            <div class="component-option" data-category="RAM">
+                                <img class="component-img" src="images/14.jpeg">
+                                <div class="component-name">G.Skill Trident Z5 RGB DDR5 32GB (2x16GB) 6000MHz</div>
+                                <div class="component-price">₨32,000</div>
+                            </div>
+                            <div class="component-option" data-category="RAM">
+                                <img class="component-img" src="images/15.jpeg">
+                                <div class="component-name">Crucial Pro Overclocking DDR5 32GB (2x16GB) 6400MHz</div>
+                                <div class="component-price">₨28,000</div>
+                            </div>
+                            <div class="component-option" data-category="RAM">
+                                <img class="component-img" src="images/16.jpeg">
+                                <div class="component-name">TeamGroup T-Force Delta RGB DDR5 32GB (2x16GB) 6000MHz</div>
+                                <div class="component-price">₨30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Storage -->
+                    <div class="component-category">
+                        <h3 class="category-title">Storage</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="Storage">
+                                <img class="component-img" src="images/17.jpeg">
+                                <div class="component-name">WD Black SN8100 2TB NVMe SSD</div>
+                                <div class="component-price">₨48,000</div>
+                            </div>
+                            <div class="component-option" data-category="Storage">
+                                <img class="component-img" src="images/18.jpeg">
+                                <div class="component-name">Samsung 990 EVO Plus 2TB</div>
+                                <div class="component-price">₨42,000</div>
+                            </div>
+                            <div class="component-option" data-category="Storage">
+                                <img class="component-img" src="images/19.png">
+                                <div class="component-name">Crucial T705 2TB PCIe Gen5</div>
+                                <div class="component-price">₨52,000</div>
+                            </div>
+                            <div class="component-option" data-category="Storage">
+                                <img class="component-img" src="images/20.jpeg">
+                                <div class="component-name">WD Black SN850X 2TB NVMe</div>
+                                <div class="component-price">₨45,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PSU -->
+                    <div class="component-category">
+                        <h3 class="category-title">PSU</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="PSU">
+                                <img class="component-img" src="images/21.jpeg">
+                                <div class="component-name">Corsair HX1500i 1500W</div>
+                                <div class="component-price">₨65,000</div>
+                            </div>
+                            <div class="component-option" data-category="PSU">
+                                <img class="component-img" src="images/22.jpeg">
+                                <div class="component-name">Corsair RM1000x Shift 1000W</div>
+                                <div class="component-price">₨45,000</div>
+                            </div>
+                            <div class="component-option" data-category="PSU">
+                                <img class="component-img" src="images/23.jpeg">
+                                <div class="component-name">be quiet! Straight Power 12 1000W</div>
+                                <div class="component-price">₨50,000</div>
+                            </div>
+                            <div class="component-option" data-category="PSU">
+                                <img class="component-img" src="images/24.jpeg">
+                                <div class="component-name">Seasonic Focus GX-850 850W</div>
+                                <div class="component-price">₨35,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Case -->
+                    <div class="component-category">
+                        <h3 class="category-title">Case</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="Case">
+                                <img class="component-img" src="images/25.jpeg">
+                                <div class="component-name">NZXT H9 Flow 2025</div>
+                                <div class="component-price">₨32,000</div>
+                            </div>
+                            <div class="component-option" data-category="Case">
+                                <img class="component-img" src="images/26.jpeg">
+                                <div class="component-name">Corsair 9000D RGB Airflow</div>
+                                <div class="component-price">₨45,000</div>
+                            </div>
+                            <div class="component-option" data-category="Case">
+                                <img class="component-img" src="images/27.jpeg">
+                                <div class="component-name">Fractal Design North XL</div>
+                                <div class="component-price">₨38,000</div>
+                            </div>
+                            <div class="component-option" data-category="Case">
+                                <img class="component-img" src="images/28.jpeg">
+                                <div class="component-name">Lian Li O11 Dynamic EVO</div>
+                                <div class="component-price">₨28,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cooling -->
+                    <div class="component-category">
+                        <h3 class="category-title">Cooling</h3>
+                        <div class="component-options">
+                            <div class="component-option" data-category="Cooling">
+                                <img class="component-img" src="images/29.jpeg">
+                                <div class="component-name">Thermalright Peerless Assassin 120 SE</div>
+                                <div class="component-price">₨9,500</div>
+                            </div>
+                            <div class="component-option" data-category="Cooling">
+                                <img class="component-img" src="images/30.jpeg">
+                                <div class="component-name">Noctua NH-D15 G2</div>
+                                <div class="component-price">₨18,000</div>
+                            </div>
+                            <div class="component-option" data-category="Cooling">
+                                <img class="component-img" src="images/31.jpeg">
+                                <div class="component-name">Arctic Liquid Freezer III Pro 360</div>
+                                <div class="component-price">₨25,000</div>
+                            </div>
+                            <div class="component-option" data-category="Cooling">
+                                <img class="component-img" src="images/33.jpeg">
+                                <div class="component-name">Thermalright Grand Vision 360</div>
+                                <div class="component-price">₨22,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="builder-summary">
+                    <h3 class="summary-title">Your Build</h3>
+                    <div class="summary-visual">
+                        <img src="https://placeholder-image-service.onrender.com/image/300x300?prompt=Custom%20PC%20build%20preview&id=build-preview" alt="Build Preview">
+                    </div>
+                    <div class="summary-list">
+                        <div class="summary-item" data-category="CPU">
+                            <span>CPU:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="GPU">
+                            <span>GPU:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="Motherboard">
+                            <span>Motherboard:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="RAM">
+                            <span>RAM:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="Storage">
+                            <span>Storage:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="PSU">
+                            <span>PSU:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="Case">
+                            <span>Case:</span>
+                            <span>Not selected</span>
+                        </div>
+                        <div class="summary-item" data-category="Cooling">
+                            <span>Cooling:</span>
+                            <span>Not selected</span>
+                        </div>
+                    </div>
+                    <div class="compatibility-check">Compatibility: All good! ✅</div>
+                    <div class="total-price">
+                        <span>Total:</span>
+                        <span>₨0.00</span>
+                    </div>
+                    <div class="build-actions">
+                        <button class="btn-build">Build Now</button>
+                        <button class="btn-save-build">Save Build</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Deals Section -->
+    <section class="deals" id="deals">
+        <div class="container">
+            <h2 class="section-title">Hot Deals</h2>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <img src="images/gamingbundle.jpg">
+                    <h3>Ultimate Gaming Bundle</h3>
+                    <p>Save 20% on selected items!</p>
+                    <button class="btn btn-primary">Shop Deal</button>
+                </div>
+                <div class="deal-card">
+                    <img src="images/gpuflashsale.jpeg">
+                    <h3>GPU Flash Sale</h3>
+                    <p>Up to 30% off on RTX series.</p>
+                    <button class="btn btn-primary">Shop Deal</button>
+                </div>
+                <div class="deal-card">
+                    <img src="images/backtoschool.jpg">
+                    <h3>Back to School Specials</h3>
+                    <p>Discounts on student builds.</p>
+                    <button class="btn btn-primary">Shop Deal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Amazing products and fast delivery!"</p>
+                    <div class="testimonial-author">- John Doe</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The PC builder tool is a game-changer."</p>
+                    <div class="testimonial-author">- Jane Smith</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Best prices in PKR I've seen."</p>
+                    <div class="testimonial-author">- Alex Johnson</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Excellent customer support."</p>
+                    <div class="testimonial-author">- Emily Davis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="images/buildgamingpc.jpg">
+                    <h3>How to Build Your First Gaming PC</h3>
+                    <p>A step-by-step guide for beginners.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="images/topgpu.jpeg">
+                    <h3>Top GPUs for 2025</h3>
+                    <p>Our picks for the best graphics cards.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="images/rgblight.jpg">
+                    <h3>RGB Lighting Tips and Tricks</h3>
+                    <p>Make your setup glow!</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">About Gaming Odyssey</h2>
+                    <p class="about-desc">We are passionate about delivering top-tier gaming hardware and custom PC builds to elevate your gaming experience.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Products</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Builds Created</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/herosection.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, Lahore, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> support@novatechgaming.com</p>
+                    <div class="contact-map">
+                        <img src="images/getintouch.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="footer-logo">GAMING<span>ODYSSEY</span></a>
+                    <p class="footer-desc">Your one-stop shop for premium gaming hardware.</p>
+                    <div class="social-links-grid">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitch"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links-grid">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#pc-builder">PC Builder</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="footer-desc">Stay updated with our latest products and deals!</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Gaming Odyssey. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/36270fd98b.js" crossorigin="anonymous"></script>
+</body>
+</html>
